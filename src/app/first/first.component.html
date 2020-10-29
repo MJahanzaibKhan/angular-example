@@ -1,0 +1,23 @@
+<div>
+    Today's item: {{item}}
+    <table>
+        <thead>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Phone</th>
+            <th>Operation</th>
+        </thead>
+        <tbody *ngFor="let person of personList; let i=index;">
+            <td>{{i}}</td>
+            <td>{{person.name}}</td>
+            <td>{{person.age}}</td>
+            <td>{{person.phone}}</td>
+            <td>
+                <button (click)='deleteRow(i)'> Delete</button>
+                <button (click)='editRow(i)'> Edit</button>
+            </td>
+        </tbody>
+    </table>
+    <button (click)='addItem()'> Add Item</button>
+</div>
